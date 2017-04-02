@@ -98,7 +98,7 @@ FB.login(function(response) {
     var access_token =   FB.getAuthResponse()['accessToken'];
     console.log('Access Token = '+ access_token);
   // console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=name,picture.type(large),photos.limit(1).type(tagged).height(50), posts.limit(10)',
+    FB.api('/me?fields=name,picture.type(large),photos.limit(2).type(tagged).height(10), posts.limit(10)',
 	function (response) {
 
          response.photos.data.forEach(function(photo){displayPic(photo.id);});
