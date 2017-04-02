@@ -4,6 +4,17 @@
 <title>Memoires Involontaires</title>
 <meta charset="UTF-8">
 </head>
+<style>
+.mystyle {
+    width: 300px;
+    height: 100px;
+    background-color: coral;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+}
+</style>
 <body>
 <script>
   // This is called with the results from from FB.getLoginStatus().
@@ -110,6 +121,7 @@ FB.login(function(response) {
     });
   }
 
+
 //type(tagged)
 function displayPic(id){
  FB.api(
@@ -118,14 +130,14 @@ function displayPic(id){
    function (response) {
      console.log(response);
      if (response && !response.error) {
-       var img = document.createElement('img');
+       var img = document.createElement('img').className = "mystyle";
        if(img && img.style) {
          img.style.height = '600px';
          img.style.width = '400px';
 
         // img.style.cssFloat = 'right';
        img.src = response.images[3].source;
-       var status = document.getElementById('status').innerHTML = <img id="img" src= "img" height="800" />;
+       var status = document.getElementById('status');
           status.appendChild(img)
 
    }
