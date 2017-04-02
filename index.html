@@ -122,7 +122,7 @@ function displayPic(id){
        if(img && img.style) {
          img.style.height = '600px';
          img.style.width = '400px';
-         img.align = 'center';
+         img.style.cssFloat = 'right';
        img.src = response.images[3].source;
        var status = document.getElementById('status');
           status.appendChild(img)
