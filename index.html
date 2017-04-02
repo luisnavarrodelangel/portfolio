@@ -98,14 +98,19 @@ FB.login(function(response) {
     var access_token =   FB.getAuthResponse()['accessToken'];
     console.log('Access Token = '+ access_token);
   // console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me?fields=name,picture.type(large),photos.limit(5){event}, posts.limit(10)',
-	function (response) {
+  //  FB.api('/me?fields=name,picture.type(large),photos.limit(5){event}, posts.limit(10)',
+  FB.api(
+  '/me',
+  'GET',
+  {"fields":"photos.since(2016-04-02T00:00:00+0000).until(2016-04-04T00:00:00+0000)"},
+  function (response) {
 
          response.photos.data.forEach(function(photo){displayPic(photo.id);});
 	//document.getElementById('status').innerHTML = response.name + "<img src ='" + response.picture.data.url + "'>" + response.birthday + "<img src ='" + response.photos.data.source + "'>" + response.posts.data;
 	console.log(response);
     });
   }
+}
 //type(tagged)
 function displayPic(id){
  FB.api(
