@@ -15,9 +15,9 @@
 }
 </style>
 <body>
-  <button onclick="displayPic(id)">Try it</button>
 
-  
+
+
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -133,11 +133,12 @@ function displayPic(id){
      console.log(response);
      if (response && !response.error) {
        var img = document.createElement('img');
-       if(img && img.className) {
+       if(img && img.setAttribute) {
          //img.style.height = '600px';
          //img.style.width = '400px';
-         img.className = "mystyle"
+         //img.className = "mystyle"
         // img.style.cssFloat = 'right';
+        img.setAttribute("align", "center");
        img.src = response.images[3].source;
        var status = document.getElementById('status');
           status.appendChild(img)
