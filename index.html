@@ -132,7 +132,7 @@ function displayPic(id){
    function (response) {
      console.log(response);
      if (response && !response.error) {
-       var img = document.createElement('img');
+       var img = document.createElement('img').setAttribute("align", "center");
        //if(img && img.setAttribute) {
          //img.style.height = '600px';
          //img.style.width = '400px';
@@ -140,7 +140,7 @@ function displayPic(id){
         // img.style.cssFloat = 'right';
       //  img.setAttribute("align", "center");
        img.src = response.images[3].source;
-       var status = document.getElementById('status').className = "mystyle";
+       var status = document.getElementById('status');
           status.appendChild(img)
 
   // }
@@ -162,7 +162,7 @@ function displayPic(id){
   the FB.login() function when clicked.
 -->
 
-<fb:login-button onclick="displayPic(id)", scope="user_photos, public_profile,email" onlogin="checkLoginState();">
+<fb:login-button  scope="user_photos, public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
