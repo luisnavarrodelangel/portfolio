@@ -102,7 +102,7 @@ FB.login(function(response) {
   FB.api(
   '/me',
   'GET',
-  {"fields":"photos.since(1975-04-02T00:00:00+0000).until(2016-04-03T00:00:00+0000).limit(1)"},
+  {"fields":"photos.since(1975-04-02T00:00:00+0000).until(2016-04-03T00:00:00+0000).limit(2)"},
   function (response) {
          response.photos.data.forEach(function(photo){displayPic(photo.id);});
 	//document.getElementById('status').innerHTML = response.name + "<img src ='" + response.picture.data.url + "'>" + response.birthday + "<img src ='" + response.photos.data.source + "'>" + response.posts.data;
@@ -122,8 +122,8 @@ function displayPic(id){
        img.src = response.images[3].source;
        var status = document.getElementById('status');
        if(status && status.style) {
-         status.style.height = '100px';
-         status.style.width = '200px';
+         status.style.height = '500px';
+         status.style.width = '300px';
               status.appendChild(img)
      }
    }
