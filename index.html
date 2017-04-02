@@ -132,7 +132,7 @@ function displayPic(id){
    function (response) {
      console.log(response);
      if (response && !response.error) {
-       var img = document.createElement('img').className = "mystyle";
+       var img = document.createElement('img');
        //if(img && img.setAttribute) {
          //img.style.height = '600px';
          //img.style.width = '400px';
@@ -140,7 +140,7 @@ function displayPic(id){
         // img.style.cssFloat = 'right';
       //  img.setAttribute("align", "center");
        img.src = response.images[3].source;
-       var status = document.getElementById('status');
+       var status = document.getElementById('status').className = "mystyle";
           status.appendChild(img)
 
   // }
