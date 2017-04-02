@@ -131,9 +131,9 @@ function displayPic(id){
      console.log(response);
      if (response && !response.error) {
        var img = document.createElement('img');
-       if(img && img.style && img.className) {
-         img.style.height = '600px';
-         img.style.width = '400px';
+       if(img && img.className) {
+         //img.style.height = '600px';
+         //img.style.width = '400px';
          img.className = "mystyle"
         // img.style.cssFloat = 'right';
        img.src = response.images[3].source;
