@@ -118,11 +118,11 @@ function displayPic(id){
    function (response) {
      console.log(response);
      if (response && !response.error) {
-       var img = document.createElement('img');
+       var img = document.createElement('img').innerHTML = < align="middle">;
        if(img && img.style) {
-         img.style.height = '300px';
+         img.style.height = '600px';
          img.style.width = '400px';
-         img.style.right = '100px';
+        // img.style.cssFloat = 'right';
        img.src = response.images[3].source;
        var status = document.getElementById('status');
           status.appendChild(img)
