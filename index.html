@@ -120,8 +120,8 @@ function displayPic(id){
      if (response && !response.error) {
        var img = document.createElement('img');
        if(img && img.style) {
-         img.style.height = '515px';
-         img.style.width = '720px';
+         img.style.height = '300px';
+         img.style.width = '400px';
       }
        img.src = response.images[3].source;
        var status = document.getElementById('status');
