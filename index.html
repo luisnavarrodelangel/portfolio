@@ -119,14 +119,11 @@ function displayPic(id){
      console.log(response);
      if (response && !response.error) {
        var img = document.createElement('img');
-       var rect1 = img.getBoundingClientRect();
-        var cx = rect1.left + rect1.width * 0.5;    // find center of first image
-        var cy = rect1.top + rect1.height * 0.5;
-
-       /*if(img && img.style) {
+       if(img && img.style) {
          img.style.height = '300px';
          img.style.width = '400px';
-      }*/
+         img.style.align = 'middle';
+      }
        img.src = response.images[3].source;
        var status = document.getElementById('status');
           status.appendChild(img)
