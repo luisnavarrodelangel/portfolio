@@ -3,31 +3,26 @@
 <head>
 <title>Memoires Involontaires</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
 </head>
 <style>
-div {
-    width:300px;
-    margin: auto;
-    border: 1px solid red;
-}
-body {
-    background-color: white;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-/*.mystyle {
-    width: 300px;
-    height: 100px;
-    text-align: center;
-    font-size: 25px;
-    color: white;
-    margin-bottom: 10px;
-}*/
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
 </style>
-<body>
+  <body>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:1500px">
+
+    <!-- Header -->
+    <header class="w3-container w3-xlarge w3-padding-24">
+      <a href="#" class="w3-center w3-button w3-white">Undesired Memory</a>
+      <a href="#about" class="w3-right w3-button w3-white">About</a>
+
+    </header>
 
 <p> <a href="about.html">about</a>
 </p>
@@ -121,7 +116,7 @@ FB.login(function(response) {
 
 //////////////////
 
-<div>
+
   function testAPI() {
     var access_token =   FB.getAuthResponse()['accessToken'];
     console.log('Access Token = '+ access_token);
@@ -169,7 +164,7 @@ function displayPic(id){
 
 
 
-</div>
+
 </script>
 
 <!--
