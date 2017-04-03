@@ -5,6 +5,11 @@
 <meta charset="UTF-8">
 </head>
 <style>
+div {
+    width:300px;
+    margin: auto;
+    border: 1px solid red;
+}
 body {
     background-color: white;
 }
@@ -116,7 +121,7 @@ FB.login(function(response) {
 
 //////////////////
 
-
+<div>
   function testAPI() {
     var access_token =   FB.getAuthResponse()['accessToken'];
     console.log('Access Token = '+ access_token);
@@ -164,7 +169,7 @@ function displayPic(id){
 
 
 
-
+</div>
 </script>
 
 <!--
