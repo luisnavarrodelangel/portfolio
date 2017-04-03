@@ -51,9 +51,9 @@ body {font-family: "Raleway", Arial, sans-serif}
       recreating painful memories at unexpected moments (Dzieza, 2015). This artwork looks to create
       reflection on the technologies of memory, their commodification and their sociopolitical use
       (Landsberg, 2004, p.129)</p>
-    </form>
+
+
     <br>
-*/
 
 <script>
   // This is called with the results from from FB.getLoginStatus().
@@ -188,6 +188,10 @@ function displayPic(id){
 }
 
 
+
+
+
+
 </script>
 
 <!--
@@ -197,8 +201,8 @@ function displayPic(id){
 -->
     <h1>Undesired Memory</h1>
 
-  <fb:login-button  align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
-  </fb:login-button>
+  <fb:try  align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
+</fb:try>
 
 <br>
 
