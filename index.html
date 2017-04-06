@@ -56,6 +56,7 @@ body {font-family: "Raleway", Arial, sans-serif}
     <br>
 
 <script>
+
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -121,7 +122,7 @@ window.fbAsyncInit = function() {
  //};
 
 
- FB.login(function(response) {
+ /*FB.login(function(response) {
        if (response.authResponse) {
              console.log('Access Token: ' + response.authResponse.accessToken);
          } else {
@@ -129,7 +130,19 @@ window.fbAsyncInit = function() {
          }
      }, {scope: 'user_photos'});
 
- };
+ };*/
+
+ FB.login(function(response) {
+	if (response.authResponse) {
+		FB.api('/me', function(response) {
+			console.log('Hello ' + response.name);
+		});
+	} else {
+		//login cancelled or not every permission accepted
+	}
+}, {scope: 'user_photos'}); //additional permissions
+
+
   // Load the SDK asynchronously
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
