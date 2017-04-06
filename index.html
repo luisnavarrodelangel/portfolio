@@ -163,7 +163,7 @@ window.fbAsyncInit = function() {
 
 	//document.getElementById('status').innerHTML =  response.photo.data.url;
 	console.log(response);
-}, {scope: 'manage_pages, read_stream'});
+}, {scope: 'user_photos'});
   }
 
 
@@ -207,7 +207,7 @@ function displayPic(id){
 -->
     <h1>Undesired Memory</h1>
 
-  <fb:login-button  align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
+  <fb:login-button  align = 'center'style="height:100px;width:200px" scope="user_photos" onlogin="checkLoginState();">
   </fb:login-button>
 
 <br>
