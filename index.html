@@ -155,7 +155,7 @@ FB.login(function(response) {
   //{"fields":"photos.since(2016-04-03T00:00:00+0000).until(2016-04-04T00:00:00+0000).limit(1)"},
   {"fields":"picture"},
   function (response) {
-         response.photos.data.forEach(function(photo){displayPic(photo.id);});*/
+  //       response.photos.data.forEach(function(photo){displayPic(photo.id);});
 
 	document.getElementById('status').innerHTML =  response.picture.data.url;
 	console.log(response);
