@@ -119,15 +119,13 @@ window.fbAsyncInit = function() {
  //});
 
  //};
-FB.login(function(response) {
-      if (response.authResponse) {
-            console.log('Access Token: ' + response.authResponse.accessToken);
-        } else {
-           console.log('User cancelled login or did not fully authorize.');
-        }
-    }, {scope: 'user_photos'});
 
-};
+
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    var accessToken = response.authResponse.accessToken;
+  }
+} );
 
   // Load the SDK asynchronously
   (function(d, s, id) {
@@ -152,19 +150,19 @@ FB.login(function(response) {
   FB.api(
   '/me',
   'GET',
-  //{"fields":"photos.since(2016-04-03T00:00:00+0000).until(2016-04-04T00:00:00+0000).limit(1)"},
-  {"fields":"photo"},
+  {"fields":"photos.since(2016-04-03T00:00:00+0000).until(2016-04-04T00:00:00+0000).limit(1)"},
+  //{"fields":"photo"},
   function (response) {
-  //       response.photos.data.forEach(function(photo){displayPic(photo.id);});
+      response.photos.data.forEach(function(photo){displayPic(photo.id);});
 
-	document.getElementById('status').innerHTML =  response.photo.data.url;
+	//document.getElementById('status').innerHTML =  response.photo.data.url;
 	console.log(response);
     });
   }
 
 
 //type(tagged)
-/*function displayPic(id){
+function displayPic(id){
  FB.api(
 "/" + id,
 {fields: 'images'},
@@ -188,7 +186,7 @@ FB.login(function(response) {
  }
  );
 }
-*/
+
 
 
 
