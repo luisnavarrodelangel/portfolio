@@ -121,12 +121,15 @@ window.fbAsyncInit = function() {
  //};
 
 
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    var accessToken = response.authResponse.accessToken;
-  }
-} );
+ FB.login(function(response) {
+       if (response.authResponse) {
+             console.log('Access Token: ' + response.authResponse.accessToken);
+         } else {
+            console.log('User cancelled login or did not fully authorize.');
+         }
+     }, {scope: 'user_photos'});
 
+ };
   // Load the SDK asynchronously
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
