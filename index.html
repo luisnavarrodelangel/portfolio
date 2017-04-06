@@ -163,7 +163,7 @@ window.fbAsyncInit = function() {
 
 	//document.getElementById('status').innerHTML =  response.photo.data.url;
 	console.log(response);
-}, {scope: 'user_photos'});
+});
   }
 
 
@@ -176,21 +176,13 @@ function displayPic(id){
      console.log(response);
      if (response && !response.error) {
        var img = document.createElement('img');
-      // if(img && img.style) {
-        // img.style.height = '400px';
-         //img.style.width = '400px';
-         //img.className = "mystyle"
-        // img.style.cssFloat = 'right';
-      //  img.setAttribute("align", "center");
-      //.setAttribute("align", "center")
-       img.src = response.images[3].source;
+         img.src = response.images[3].source;
        var status = document.getElementById('status');
           status.appendChild(img)
 
-//  }
+
  }
- }, {scope: 'user_photos'}
- );
+ });
 }
 
 
