@@ -123,16 +123,14 @@ window.fbAsyncInit = function() {
 
 
  FB.login(function(response) {
-	if (response.authResponse) {
-		FB.api('/me', function(response) {
-			console.log('Hello ' + response.name);
-		});
-	} else {
-		//login cancelled or not every permission accepted
-	}
-}, {scope: 'user_photos'}); //additional permissions
-};
+       if (response.authResponse) {
+             console.log('Access Token: ' + response.authResponse.accessToken);
+         } else {
+            console.log('User cancelled login or did not fully authorize.');
+         }
+     }, {scope: 'user_photos'});
 
+ };
   // Load the SDK asynchronously
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -163,7 +161,7 @@ window.fbAsyncInit = function() {
 
 	//document.getElementById('status').innerHTML =  response.photo.data.url;
 	console.log(response);
-});
+    });
   }
 
 
@@ -176,13 +174,21 @@ function displayPic(id){
      console.log(response);
      if (response && !response.error) {
        var img = document.createElement('img');
-         img.src = response.images[3].source;
+      // if(img && img.style) {
+        // img.style.height = '400px';
+         //img.style.width = '400px';
+         //img.className = "mystyle"
+        // img.style.cssFloat = 'right';
+      //  img.setAttribute("align", "center");
+      //.setAttribute("align", "center")
+       img.src = response.images[3].source;
        var status = document.getElementById('status');
           status.appendChild(img)
 
-
+//  }
  }
- });
+ }
+ );
 }
 
 
@@ -199,7 +205,7 @@ function displayPic(id){
 -->
     <h1>Undesired Memory</h1>
 
-  <fb:login-button  align = 'center'style="height:100px;width:200px" scope="user_photos" onlogin="checkLoginState();">
+  <fb:login-button  align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
 
 <br>
