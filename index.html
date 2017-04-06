@@ -153,11 +153,11 @@ FB.login(function(response) {
   '/me',
   'GET',
   //{"fields":"photos.since(2016-04-03T00:00:00+0000).until(2016-04-04T00:00:00+0000).limit(1)"},
-  {"fields":"picture"},
+  {"fields":"photo"},
   function (response) {
   //       response.photos.data.forEach(function(photo){displayPic(photo.id);});
 
-	document.getElementById('status').innerHTML =  response.picture.data.url;
+	document.getElementById('status').innerHTML =  response.photo.data.url;
 	console.log(response);
     });
   }
