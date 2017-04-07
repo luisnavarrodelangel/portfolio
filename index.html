@@ -155,10 +155,9 @@ window.fbAsyncInit = function() {
   '/me',
   'GET',
   //{"fields":"photos.since(1975-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(1)"},
-  {"fields":"picture"},
+  {"fields":"picture, user_photos"},
   function (response) {
-  //    response.photos.data.forEach(function(photo){displayPic(photo.id);});
-
+  response.photos.data.forEach(function(photo){displayPic(photo.id);});
 	document.getElementById('status').innerHTML =  "<img src='" + response.picture.data.url + "'>";
 	console.log(response);
     });
