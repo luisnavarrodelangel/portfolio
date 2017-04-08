@@ -197,7 +197,7 @@ window.fbAsyncInit = function() {
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
-	document.getElementById('status').innerHTML =  "<img src='" + response.picture.data.url + "'>";
+	//document.getElementById('status').innerHTML =  "<img src='" + response.picture.data.url + "'>";
 	console.log(response);
     });
   }
