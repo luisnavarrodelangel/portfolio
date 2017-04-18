@@ -224,7 +224,7 @@ function displayPic(id){
             a.id = '01';
             a.download = 'image';
             status.appendChild(a);
-            printP.onclick = document.getElementById('01')
+            printP.onclick = function luis () {document.getElementById('01')}
 
         }
       }
@@ -249,7 +249,7 @@ function displayPic(id){
 
  <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
-  <button id="printP">Print Memory</button>
+  <button onclick="printP">Print Memory</button>
 
 <br>
 
