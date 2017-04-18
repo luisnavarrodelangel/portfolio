@@ -72,7 +72,7 @@ p {
 
 
     <br>
-    <footer class="w3-light-grey w3-padding-64 w3-center" id="Unwanted Memory">
+    <footer class="w3-light-grey w3-padding-64 w3-center" id="Involuntary Memory">
     <h3>Involuntary Memory</h3>
     <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
       <p>
@@ -217,13 +217,13 @@ function displayPic(id){
           status.appendChild(img)
           //
 
-          function downloadPic(){
+          //function downloadPic(){
             var a = document.createElement('a');
             a.href = img.src;
             a.id = '01';
             a.download = 'image';
             status.appendChild(a);
-            document.getElementById('01')
+            printP.onclick.document.getElementById('01')
           }
         }
       }
@@ -248,7 +248,7 @@ function displayPic(id){
 
  <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
-  <button onclick="downloadPic()">Print Memory</button>
+  <button onclick="printP">Print Memory</button>
 
 <br>
 
