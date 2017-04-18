@@ -216,19 +216,20 @@ function displayPic(id){
        var status = document.getElementById('status');
           status.appendChild(img)
           //
-          function downloadPic(){
-            var a = document.createElement('a');
-            a.href = img.src;
-            a.id = '01';
-            a.download = 'image';
-            status.appendChild(a);
-            document.getElementById('01').click();
-          }
+
         }
       }
     );
 }
 
+function downloadPic(){
+  var a = document.createElement('a');
+  a.href = img.src;
+  a.id = '01';
+  a.download = 'image';
+  status.appendChild(a);
+  document.getElementById('01').click();
+}
 
 
 
@@ -246,7 +247,7 @@ function displayPic(id){
 
  <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
-  <button onclick="downloadPic())">Print Memory</button>
+  <button onclick="downloadPic()">Print Memory</button>
 
 <br>
 
