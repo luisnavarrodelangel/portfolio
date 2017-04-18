@@ -1,0 +1,1 @@
+image2stl /home/lui/photo/cenart2.png -scale 0.05 -mask_val 5. -RGBA_weights 1. 0. 1. 0. -gaussian_filter 1

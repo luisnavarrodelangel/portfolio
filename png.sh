@@ -1,0 +1,1 @@
+mogrify -format png /home/lui/photo/cenart2.jpg
