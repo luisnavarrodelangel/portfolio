@@ -1,1 +1,1 @@
-mogrify -format png /home/lui/photo/17343034_10154563266273042_85994994353472668_n.jpg
+mogrify -format png /home/lui/photo/burro.jpg

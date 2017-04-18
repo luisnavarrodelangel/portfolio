@@ -220,7 +220,7 @@ function displayPic(id){
           //function downloadPic(){
             var a = document.createElement('a');
             var printP = document.getElementById("printP");
-            printP.onclick = function luis () {
+            printP.onclick = function printM () {
             a.href = img.src;
             a.id = '01';
             a.download = 'image';
@@ -233,7 +233,11 @@ function displayPic(id){
     );
 }
 
-
+function logout() {
+FB.logout(function(response) {
+  // user is now logged out
+});
+}
 
 //.click();
 
@@ -252,6 +256,7 @@ function displayPic(id){
  <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
   <button id="printP">Print Memory</button>
+  <button onclick="logout">logout</button>
 
 <br>
 

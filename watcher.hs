@@ -15,6 +15,7 @@ main = forever $ do
    if k == [".", ".."]
      then callCommand "clear"
      else do
+
      if l == ".jpg"
 
        then do
@@ -40,7 +41,7 @@ main = forever $ do
                print "meshlab index 1"
                p <- getDirectoryContents "/home/lui/photo"
                let q = (!! 4) p
-                  in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                  in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                callCommand "sh open.sh"
              --  threadDelay 2000000
                callCommand "sh delete.sh"
@@ -63,7 +64,7 @@ main = forever $ do
                   if p' == ".stl"
                     then do
                       let q = (!! 1) p
-                        in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                        in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                       callCommand "sh open.sh"
                   --  threadDelay 2000000
                       callCommand "sh delete.sh"
@@ -77,7 +78,7 @@ main = forever $ do
                     if p' == ".stl"
                       then do
                         let q = (!! 2) p
-                          in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                          in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                         callCommand "sh open.sh"
                     --  threadDelay 2000000
                         callCommand "sh delete.sh"
@@ -90,7 +91,7 @@ main = forever $ do
                     if p' == ".stl"
                      then do
                        let q = (!! 3) p
-                         in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                         in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                        callCommand "sh open.sh"
                  --  threadDelay 2000000
                        callCommand "sh delete.sh"
@@ -99,27 +100,20 @@ main = forever $ do
                      else do
                      print "meshlab index 4"
                      p <- getDirectoryContents "/home/lui/photo"
-                     p' <- takeExtension `fmap`  (!! 4) `fmap` getDirectoryContents "/home/lui/photo"
-                     if p' == ".stl"
-                      then do
-                        let q = (!! 4) p
-                          in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
-                        callCommand "sh open.sh"
-                    --  threadDelay 2000000
-                        callCommand "sh delete.sh"
-
-                     else do
-                     print "luis"
+                     let q = (!! 4) p
+                        in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
+                     callCommand "sh open.sh"
+                     callCommand "sh delete.sh"
 
 
                   else  do
-                  print "lllegamos"
+                  print "llegamos"
 
 
 
 
   ----------------------------index 2
-
+           threadDelay 200000
            else do
            print "index2 si"
            let m = (!! 2) k
@@ -145,7 +139,7 @@ main = forever $ do
                if p' == ".stl"
                  then do
                    let q = (!! 2) p
-                    in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                    in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                    callCommand "sh open.sh"
              --  threadDelay 2000000
                    callCommand "sh delete.sh"
@@ -154,7 +148,7 @@ main = forever $ do
                  else do
                  print "meshlab index 4"
                  let q = (!! 4) p
-                   in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                   in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                  callCommand "sh open.sh"
           --  threadDelay 2000000
                  callCommand "sh delete.sh"
@@ -177,7 +171,7 @@ main = forever $ do
                   if p' == ".stl"
                     then do
                       let q = (!! 1) p
-                        in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                        in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                       callCommand "sh open.sh"
                   --  threadDelay 2000000
                       callCommand "sh delete.sh"
@@ -191,7 +185,7 @@ main = forever $ do
                     if p' == ".stl"
                     then do
                     let q = (!! 2) p
-                      in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                      in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                     callCommand "sh open.sh"
                 --  threadDelay 2000000
                     callCommand "sh delete.sh"
@@ -204,7 +198,7 @@ main = forever $ do
                     if p' == ".stl"
                     then do
                     let q = (!! 3) p
-                      in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                      in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                     callCommand "sh open.sh"
                --  threadDelay 2000000
                     callCommand "sh delete.sh"
@@ -217,7 +211,7 @@ main = forever $ do
                     if p' == ".stl"
                     then do
                     let q = (!! 4) p
-                      in writeFile "open.sh" ("meshlab " ++ "/home/lui/photo/" ++ q)
+                      in writeFile "open.sh" ("./Cura-2.4.0.AppImage " ++ "/home/lui/photo/" ++ q)
                     callCommand "sh open.sh"
               --  threadDelay 2000000
                     callCommand "sh delete.sh"
