@@ -194,7 +194,7 @@ window.fbAsyncInit = function() {
 
   '/me',
   'GET',
-   {  var num = 3; "fields":"photos.since(1975-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(3), picture"},
+   {  var num = 3; "fields":"photos.since(" + num "-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(3), picture"},
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
