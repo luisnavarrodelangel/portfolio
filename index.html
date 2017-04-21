@@ -186,7 +186,7 @@ window.fbAsyncInit = function() {
 
   function testAPI() {
     var access_token =   FB.getAuthResponse()['accessToken'];
-    var num = 3;
+    var year = 3;
     console.log('Access Token = '+ access_token);
   // console.log('Welcome!  Fetching your information.... ');
   //  FB.api('/me?fields=name,picture.type(large),photos.limit(5){event}, posts.limit(10)',
@@ -194,7 +194,7 @@ window.fbAsyncInit = function() {
 
   '/me',
   'GET',
-   {   "fields":"photos.since(" + "1975" + "-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(3), picture"},
+   {   "fields":"photos.since(" + year + "-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(3), picture"},
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
