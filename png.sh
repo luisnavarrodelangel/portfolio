@@ -1,1 +1,1 @@
-mogrify -format png /home/lui/photo/burro.jpg
+mogrify -format png /Users/Fanny/Documents/photo/..
