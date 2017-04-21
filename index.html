@@ -191,9 +191,10 @@ window.fbAsyncInit = function() {
   // console.log('Welcome!  Fetching your information.... ');
   //  FB.api('/me?fields=name,picture.type(large),photos.limit(5){event}, posts.limit(10)',
   FB.api(
+    var m = 1975;
   '/me',
   'GET',
-   {"fields":"photos.since(1975-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(1), picture"},
+   {"fields":"photos.since(m-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(1), picture"},
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
