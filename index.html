@@ -247,10 +247,8 @@ function displayPic(id){
     );
 }
 
-function logout() {
-FB.logout(function(response) {
-  // user is now logged out
-});
+function Logout() {
+  FB.logout(function () { document.location.reload(); });
 }
 
 //.click();
@@ -273,7 +271,7 @@ FB.logout(function(response) {
 	     <br>
   <button id="printP">Print Memory</button>
   <button onclick="logout">logout</button>
-
+  <input type="button" value="Logout" onclick="Logout();" />
 	
 
 
