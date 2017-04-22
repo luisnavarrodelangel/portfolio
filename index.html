@@ -190,7 +190,8 @@ window.fbAsyncInit = function() {
     var d = new Date();
     var day = d.getDate();  
     var dayPlusOne = day + 1;
-    //document.getElementById("demo").innerHTML = year;
+    var month = d.getMonth();
+	  //document.getElementById("demo").innerHTML = year;
     console.log('Access Token = '+ access_token);
   // console.log('Welcome!  Fetching your information.... ');
   //  FB.api('/me?fields=name,picture.type(large),photos.limit(5){event}, posts.limit(10)',
@@ -198,7 +199,7 @@ window.fbAsyncInit = function() {
 
   '/me',
   'GET',
-   {   "fields":"photos.since(1975-04-"+ day + "T00:00:00+0000).until(" + year + "-04-"+ dayPlusOne +"T00:00:00+0000).limit(1), picture"},
+   {   "fields":"photos.since(1975-"+ month "-"+ day + "T00:00:00+0000).until(" + year + "-" + month+ "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
