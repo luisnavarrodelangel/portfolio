@@ -206,7 +206,7 @@ var dat = new Date();
 
   '/me',
   'GET',
-   {   "fields":"photos.since(1975-"dat"-03T00:00:00+0000).until(" + year + "-04-07T00:00:00+0000).limit(1), picture"},
+   {   "fields":"photos.since(1975-" + dat + "-03T00:00:00+0000).until(" + year + "-04-07T00:00:00+0000).limit(1), picture"},
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
