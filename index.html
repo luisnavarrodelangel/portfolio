@@ -191,7 +191,7 @@ window.fbAsyncInit = function() {
     var day = d.getDate();  
     var dayPlusOne = day + 1;
     var month = d.getMonth();
-    console.log( year + month + year + dayPlusOne);
+    console.log( year + "-" + month + "-" + year + "-" + dayPlusOne);
 	  //document.getElementById("demo").innerHTML = year;
     console.log('Access Token = '+ access_token);
   // console.log('Welcome!  Fetching your information.... ');
@@ -200,7 +200,7 @@ window.fbAsyncInit = function() {
 
   '/me',
   'GET',
-   {   "fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
+   {   "fields":"photos.since(2007" + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
