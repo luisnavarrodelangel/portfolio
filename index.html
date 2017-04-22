@@ -208,7 +208,7 @@ window.fbAsyncInit = function() {
 
   '/me',
   'GET',
-   {  "fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month2 + "-" + day +"T00:00:00+0000).limit(1), picture"},
+   {  "fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month2 + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
   //"fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
