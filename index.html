@@ -187,17 +187,8 @@ window.fbAsyncInit = function() {
   function testAPI() {
     var access_token =   FB.getAuthResponse()['accessToken'];
     var year = Math.floor(Math.random() * (2016 - 2007 + 1)) + 2007;
-	  
-	  Date.prototype.addDays = function(days) {
-  var dat = new Date(this.valueOf());
-  dat.setDate(dat.getDate() + days);
-  return dat;
-
-
-var dat = new Date();
-
-//alert(dat.addDays(5))
-	  
+    var d = new Date();
+    var day = d.getDate();  
     //document.getElementById("demo").innerHTML = year;
     console.log('Access Token = '+ access_token);
   // console.log('Welcome!  Fetching your information.... ');
@@ -206,7 +197,7 @@ var dat = new Date();
 
   '/me',
   'GET',
-   {   "fields":"photos.since(1975-" + dat + "-03T00:00:00+0000).until(" + year + "-04-07T00:00:00+0000).limit(1), picture"},
+   {   "fields":"photos.since(1975-04-"+ day "T00:00:00+0000).until(" + year + "-04-"+ (day+1) +"T00:00:00+0000).limit(1), picture"},
   //{"fields":"picture, photos"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
