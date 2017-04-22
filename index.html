@@ -26,6 +26,7 @@ p {
 
       <a href="#Involuntary Memory" class="w3-right w3-button w3-white">Involuntary Memory</a>
       <a href="#about" class="w3-left w3-button w3-white">About</a>
+      <a href="#Privacy & Terms" class="w3-left w3-button w3-white">Privacy & Terms</a>    
 
     </header>
     <!-- Photo Grid -->
@@ -58,9 +59,7 @@ p {
       through new media, specifically Facebook. As a generator of mémoires involontaires (Landsberg,
       2004, p.17) and as a hegemonic lieu de memoire (Nora, 1986) Facebook not only archive photos but
       also forces the users to confront them again. In its “on this day” app, the algorithm forbids
-      the user to forget by recreating painful memories at unexpected moments (Dzieza, 2015). This
-      artwork looks to create reflection on the technologies of memory, their commodification and
-      their sociopolitical use Landsberg, 2004, p.129)</p>
+      the user to forget by recreating painful memories at unexpected moments (Dzieza, 2015).</p>
 
       <p> “On this day” is a Facebook app that displays photos, posts, and videos either uploaded by the user
          or where the user was tagged by someone else. The purpose of this app is to display user’s past memories.
@@ -79,7 +78,7 @@ p {
          <br>Instructions:<br>
          <br>1. Make click on the Facebook login button.
          <br>2. A photo taken from your timeline dated on the current day will be shown on the screen.
-        <br> 3. Additionally, three options will be prompted to you: print the image or not print
+        <br> 3. Choose between "Print Memory" or "logout"
          <br>4. If you choose to print the image, it will be downloaded and converted to STL format almost ready to send it to print.
          <br>5. If you choose to not print the image, you will be logged out from Facebook.
          <br>
@@ -264,9 +263,22 @@ FB.logout(function(response) {
 
  <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
+	     <br>
+	     <br>
   <button id="printP">Print Memory</button>
   <button onclick="logout">logout</button>
 
+	 <br>
+    <footer class="w3-light-grey w3-padding-64 w3-center" id="Privacy & Terms">
+    <h4>Privacy & Terms</h3>
+    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+      <p>
+         <br>-If you decide to print your photo you are free to stop the process at any time.
+         <br>-No data is gathered through this web page.
+         <br>-If you decide to print your photo, at the end of the process the photo is deleted from the computer.
+         <br>-No passwords are saved on this machine or the web page.
+
+</p>
 <br>
 
 
