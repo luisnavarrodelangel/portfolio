@@ -1,1 +1,0 @@
-rm /home/lui/photo/*

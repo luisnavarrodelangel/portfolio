@@ -1,1 +1,0 @@
-image2stl /Users/Fanny/Documents/photoluisPhoto1.jpg -scale 0.05 -mask_val 5. -RGBA_weights 1. 0. 1. 0. -gaussian_filter 1

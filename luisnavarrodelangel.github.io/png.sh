@@ -1,1 +1,0 @@
-mogrify -format png /home/lui/photo/burrito3.jpg
