@@ -1,1 +1,0 @@
-mogrify -format png /Users/Fanny/Documents/photo/..

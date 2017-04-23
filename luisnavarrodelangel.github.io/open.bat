@@ -1,1 +1,0 @@
-./Cura-2.4.0.AppImage /home/lui/photo/burro.stl
