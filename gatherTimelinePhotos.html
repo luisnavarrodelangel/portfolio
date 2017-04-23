@@ -199,14 +199,10 @@ function displayPic(id){
      console.log(response);
      if (response && !response.error) {
        var img = document.createElement('img');
-       img.src = response.images[2000].source;
+       img.src = response.images[1].source;
        var status = document.getElementById('status');
           status.appendChild(img)
           //
-
-          //function downloadPic(){
-            var a = document.createElement('a');
-            var printP = document.getElementById("printP");
             downloadP.onclick = function printM () {
             a.href = img.src;
             a.id = '01';
@@ -240,11 +236,7 @@ function Logout() {
 
  <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
-	     <br>
-	     <br>
 
-
-  <input type="button" value="Download" id="downloadP" />
   <input type="button" value="Logout" onclick="Logout();" />
 
 
