@@ -1,1 +1,1 @@
-mogrify -format png /Users/Fanny/Documents/photo/..
+mogrify -format png /home/lui/photo/burrito3.jpg

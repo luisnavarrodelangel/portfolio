@@ -1,1 +1,1 @@
-./Cura-2.4.0.AppImage /home/lui/photo/burro.stl
+meshlab /home/lui/photo/13335540_1035546836483225_37283729463598169_n.stl
