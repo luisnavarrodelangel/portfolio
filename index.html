@@ -58,9 +58,7 @@ p {
       through new media, specifically Facebook. As a generator of mémoires involontaires (Landsberg,
       2004, p.17) and as a hegemonic lieu de memoire (Nora, 1986) Facebook not only archive photos but
       also forces the users to confront them again. In its “on this day” app, the algorithm forbids
-      the user to forget by recreating painful memories at unexpected moments (Dzieza, 2015). This
-      artwork looks to create reflection on the technologies of memory, their commodification and
-      their sociopolitical use Landsberg, 2004, p.129)</p>
+      the user to forget by recreating painful memories at unexpected moments (Dzieza, 2015).</p>
 
       <p> “On this day” is a Facebook app that displays photos, posts, and videos either uploaded by the user
          or where the user was tagged by someone else. The purpose of this app is to display user’s past memories.
@@ -70,6 +68,18 @@ p {
          tries to mimic the algorithm of "on this day" in order to highlight that, as a clumsy curator of personal memories,
          it continuously brings up memories from past events.</p>
 
+	     <br>
+    <footer class="w3-light-grey w3-padding-64 w3-center" id="Privacy & Terms">
+    <h4>Privacy & Terms</h3>
+    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+      <p>
+         <br>-If you decide to print your photo you are free to stop the process at any time.
+         <br>-No data is gathered through this web page.
+         <br>-If you decide to print your photo, at the end of the process the photo is deleted from the computer.
+         <br>-No passwords are saved on this machine or the web page.
+
+</p>
+<br>
 
     <br>
     <footer class="w3-light-grey w3-padding-64 w3-center" id="Involuntary Memory">
@@ -79,16 +89,11 @@ p {
          <br>Instructions:<br>
          <br>1. Make click on the Facebook login button.
          <br>2. A photo taken from your timeline dated on the current day will be shown on the screen.
-        <br> 3. Additionally, three options will be prompted to you: print the image or not print
+        <br> 3. Choose between "Print Memory" or "logout"
          <br>4. If you choose to print the image, it will be downloaded and converted to STL format almost ready to send it to print.
          <br>5. If you choose to not print the image, you will be logged out from Facebook.
          <br>
-         <br>Privacy & Terms<br>
-         <br>-If you decide to print your photo you are free to stop the process at any time.
-         <br>-No data is gathered through this web page.
-         <br>-If you decide to print your photo, at the end of the process the photo is deleted from the computer.
-         <br>-No passwords are saved on this machine or the web page.
-
+         
 </p>
 <script>
 
@@ -186,7 +191,16 @@ window.fbAsyncInit = function() {
 
   function testAPI() {
     var access_token =   FB.getAuthResponse()['accessToken'];
-    var year = 3;
+    var year = Math.floor(Math.random() * (2016 - 2007 + 1)) + 2007;
+    var yearMinusOne = year - 1;
+    var d = new Date();
+    var day = d.getDate();  
+    var dayPlusOne = day + 1;
+    var monthLessOne = d.getMonth();
+    var month = monthLessOne + 1;
+    var month2 = month + 3;
+    console.log( year + "-" + year + "-" + month + "-" + day + "-" + dayPlusOne);
+	  //document.getElementById("demo").innerHTML = year;
     console.log('Access Token = '+ access_token);
   // console.log('Welcome!  Fetching your information.... ');
   //  FB.api('/me?fields=name,picture.type(large),photos.limit(5){event}, posts.limit(10)',
@@ -194,15 +208,15 @@ window.fbAsyncInit = function() {
 
   '/me',
   'GET',
-   {   "fields":"photos.since(" + year + "-04-03T00:00:00+0000).until(2017-04-07T00:00:00+0000).limit(3), picture"},
-  //{"fields":"picture, photos"},
+   {  "fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month2 + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
+  //"fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
 	//document.getElementById('status').innerHTML =  "<img src='" + response.picture.data.url + "'>";
 	console.log(response);
     });
   }
-
+  
 
 //type(tagged)
 function displayPic(id){
@@ -234,10 +248,8 @@ function displayPic(id){
     );
 }
 
-function logout() {
-FB.logout(function(response) {
-  // user is now logged out
-});
+function Logout() {
+  FB.logout(function () { document.location.reload(); });
 }
 
 //.click();
@@ -256,10 +268,13 @@ FB.logout(function(response) {
 
  <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
-  <button id="printP">Print Memory</button>
-  <button onclick="logout">logout</button>
+	     <br>
+	     <br>
+  
 
-<br>
+  <input type="button" value="Print Memory" id="printP" />
+  <input type="button" value="Logout" onclick="Logout();" />
+	
 
 
 
