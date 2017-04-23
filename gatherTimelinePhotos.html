@@ -179,7 +179,7 @@ window.fbAsyncInit = function() {
   FB.api(
   '/me',
   'GET',
-   {  "fields":"photos.type(tagged)"},
+   {  "fields":"photos.limit(2000)"},
    //.type(tagged).limit(10000)
   //"fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
   function (response) {
