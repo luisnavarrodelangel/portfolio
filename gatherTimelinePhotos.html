@@ -179,7 +179,8 @@ window.fbAsyncInit = function() {
   FB.api(
   '/me',
   'GET',
-   {  "fields":"photos.type(tagged).limit(10000)"},
+   {  "fields":"photos"},
+   //.type(tagged).limit(10000)
   //"fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
   function (response) {
   response.photos.data.forEach(function(photo){displayPic(photo.id);});
@@ -198,7 +199,7 @@ function displayPic(id){
      console.log(response);
      if (response && !response.error) {
        var img = document.createElement('img');
-       img.src = response.images[1].source;
+       img.src = response.images.source;
        var status = document.getElementById('status');
           status.appendChild(img)
           //
