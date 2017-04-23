@@ -14,6 +14,7 @@ body {font-family: "Raleway", Arial, sans-serif}
 p {
     text-align: justify;
     text-justify: inter-word;
+    font-size: 200%;
 }
 </style>
   <body>
@@ -54,19 +55,15 @@ p {
             </div>
 
     <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
-      <p>Ghosts, pervasiveness and Facebook explores the concept of pervasive memory experienced
-      through new media, specifically Facebook. As a generator of mémoires involontaires (Landsberg,
-      2004, p.17) and as a hegemonic lieu de memoire (Nora, 1986) Facebook not only archive photos but
-      also forces the users to confront them again. In its “on this day” app, the algorithm forbids
-      the user to forget by recreating painful memories at unexpected moments (Dzieza, 2015).</p>
 
       <p> “On this day” is a Facebook app that displays photos, posts, and videos either uploaded by the user
          or where the user was tagged by someone else. The purpose of this app is to display user’s past memories.
          The photos, posts, and videos displayed are gathered from the user’s public album “my timeline” dated in
          the current day and month but in previous years. This app follows automated steps in order to ‘curate’ the
-         user's memories. The latter creates a contingent of meaningless, painful or happy memories. This installation
-         tries to mimic the algorithm of "on this day" in order to highlight that, as a clumsy curator of personal memories,
-         it continuously brings up memories from past events.</p>
+         user's memories.Memory, Pervasiveness, and Facebook is an installation that explores the concept of pervasive memory.
+         This installation tries to mimic the algorithm of "on this day" in order to highlight that,
+         as a clumsy curator of personal memories, it continuously shows a contingent of meaningless, painful or happy
+         memories.</p>
 
 	     <br>
     <footer class="w3-light-grey w3-padding-64 w3-center" id="Privacy & Terms">
@@ -93,7 +90,7 @@ p {
          <br>4. If you choose to print the image, it will be downloaded and converted to STL format almost ready to send it to print.
          <br>5. If you choose to not print the image, you will be logged out from Facebook.
          <br>
-         
+
 </p>
 <script>
 
@@ -194,7 +191,7 @@ window.fbAsyncInit = function() {
     var year = Math.floor(Math.random() * (2016 - 2007 + 1)) + 2007;
     var yearMinusOne = year - 1;
     var d = new Date();
-    var day = d.getDate();  
+    var day = d.getDate();
     var dayPlusOne = day + 1;
     var monthLessOne = d.getMonth();
     var month = monthLessOne + 1;
@@ -216,7 +213,7 @@ window.fbAsyncInit = function() {
 	console.log(response);
     });
   }
-  
+
 
 //type(tagged)
 function displayPic(id){
@@ -270,11 +267,11 @@ function Logout() {
   </fb:login-button>
 	     <br>
 	     <br>
-  
+
 
   <input type="button" value="Print Memory" id="printP" />
   <input type="button" value="Logout" onclick="Logout();" />
-	
+
 
 
 
