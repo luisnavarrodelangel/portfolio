@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Memory, Pervasiveness, and Facebook </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+</head>
+<style>
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 150%;
+}
+</style>
+  <body>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:500px">
+
+    <!-- Header -->
+    <header class="w3-container w3-xlarge w3-padding-30">
+
+      <a href="#Involuntary Memory" class="w3-right w3-button w3-white">Involuntary Memory</a>
+      <a href="#about" class="w3-left w3-button w3-white">About</a>
+
+    </header>
+    <!-- Photo Grid -->
+    <div class="w3-row">
+      <div class="w3-half">
+        <img src="fondo.JPG" style="width:100%">
+        <img src="fondo.JPG" style="width:100%">
+            </div>
+
+      <div class="w3-half">
+        <img src="fondo.JPG" style="width:100%">
+        <img src="fondo.JPG" style="width:100%">
+      </div>
+    </div>
+
+  <!-- End Page Content -->
+  </div>
+  <!-- Footer / About Section -->
+  <footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+
+    <h2>About</h2>
+    <div class="w3-row">
+      <div class="w3-half">
+
+
+            </div>
+
+    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+
+      <p>   “On this day” is a Facebook app that displays photos, posts, and videos either uploaded by the user
+         or where the user was tagged by someone else. The purpose of this app is to display user’s past memories.
+         The photos, posts, and videos displayed are gathered from the user’s public album dated in
+         the current day and month but in previous years. This app follows automated steps in order to ‘curate’ the
+         user's memories.
+            "Memory, Pervasiveness, and Facebook" is an installation that explores the concept of pervasive memory.
+         This installation tries to mimic the algorithm of "on this day" in order to highlight that,
+         as a clumsy curator of personal memories, it continuously shows a contingent of meaningless, painful or happy
+         memories.</p>
+
+	     <br>
+    <footer class="w3-light-grey w3-padding-64 w3-center" id="Privacy & Terms">
+    <h4>Privacy & Terms</h3>
+    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+      <p>
+         <br>-If you decide to print your photo you are free to stop the process at any time.
+         <br>-No data is gathered through this web page.
+         <br>-At the end of the process the photo is deleted from the computer.
+         <br>-No passwords are stored on this machine or the web page.
+
+</p>
+<br>
+
+    <br>
+    <footer class="w3-light-grey w3-padding-64 w3-center" id="Involuntary Memory">
+    <h3>Involuntary Memory</h3>
+    <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+      <p>
+         <br>Instructions:<br>
+         <br>1. Make click on the Facebook login button.
+         <br>2. A photo taken from your timeline dated close to the current day will be shown on the screen.
+        <br> 3. Choose between "Print Memory" or "logout"
+         <br>4. If you choose to print the image, it will be downloaded and converted to STL format almost ready to send it to print.
+         <br>5. If you choose to not print the image, you will be logged out from Facebook.
+         <br>
+</p>
+<p id="date"></p>
+
+<script>
+
+
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      //displayPic();
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+/////////////////
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+    //  uid = response.authResponse && response.authResponse.userID || null;
+      statusChangeCallback(response);
+    });
+  }
+
+
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1887153131531046',
+    channelUrl : 'https://memoiresinvolontaires.000webhostapp.com/index.html',
+    cookie     : true,  // enable cookies to allow the server to access
+                        // the session
+    status     : true, // check login status
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.8' // use graph api version 2.8
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+ // FB.getLoginStatus(function(response) {
+  //statusChangeCallback(response);
+ //});
+
+ //};
+
+
+ FB.login(function(response) {
+       if (response.authResponse) {
+      //   uid = response.authResponse && response.authResponse.userID || null;
+             console.log('Access Token: ' + response.authResponse.accessToken);
+         } else {
+            console.log('User cancelled login or did not fully authorize.');
+         }
+     }, {scope: 'user_photos'});
+
+  // Load the SDK asynchronously
+};
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+
+//////////////////
+
+
+  function testAPI() {
+    var access_token =   FB.getAuthResponse()['accessToken'];
+    var year = Math.floor(Math.random() * (2016 - 2007 + 1)) + 2007;
+    var yearMinusOne = year - 1;
+    var d = new Date();
+    var day = d.getDate();
+    var dayPlusOne = day + 1;
+    var monthLessOne = d.getMonth();
+    var month = monthLessOne + 1;
+    var month2 = month + 2;
+    console.log( year + "-" + year + "-" + month + "-" + day + "-" + dayPlusOne);
+	  //document.getElementById("demo").innerHTML = year;
+    console.log('Access Token = '+ access_token);
+  // console.log('Welcome!  Fetching your information.... ');
+  //  FB.api('/me?fields=name,picture.type(large),photos.limit(5){event}, posts.limit(10)',
+  // Change heading:
+  document.getElementById("date").innerHTML = "Your memory is dated between " + month + "-" + day + "-" + year + "to" + month2 + "-" + dayPlusOne + "-" + year ;
+  FB.api(
+  '/me',
+  'GET',
+   {  "fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month2 + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
+  //"fields":"photos.since(" + year + "-" + month + "-" + day + "T00:00:00+0000).until(" + year + "-" + month + "-" + dayPlusOne +"T00:00:00+0000).limit(1), picture"},
+  function (response) {
+  response.photos.data.forEach(function(photo){displayPic(photo.id);});
+	//document.getElementById('status').innerHTML =  "<img src='" + response.picture.data.url + "'>";
+	console.log(response);
+    });
+  }
+
+
+//type(tagged)
+function displayPic(id){
+ FB.api(
+"/" + id,
+{fields: 'images'},
+   function (response) {
+     console.log(response);
+     if (response && !response.error) {
+       var img = document.createElement('img');
+       img.src = response.images[1].source;
+       var status = document.getElementById('status');
+          status.appendChild(img)
+          //
+
+          //function downloadPic(){
+            var a = document.createElement('a');
+            var printP = document.getElementById("printP");
+            printP.onclick = function printM () {
+            a.href = img.src;
+            a.id = '01';
+            a.download = 'image';
+            status.appendChild(a);
+           document.getElementById('01').click()
+         }
+
+        }
+      }
+    );
+}
+
+function Logout() {
+  FB.logout(function () { document.location.reload(); });
+}
+
+//.click();
+
+
+
+
+
+</script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+ <fb:login-button size="xlarge" align = 'center'style="height:100px;width:200px" scope="user_photos, public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
+	     <br>
+	     <br>
+
+
+  <input type="button" value="Print Memory" id="printP" />
+  <input type="button" value="Logout" onclick="Logout();" />
+
+
+
+
+<div id="status">
+</div>
+
+</body>
+</html>
