@@ -9,22 +9,22 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<body class="w3-white w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:200px; margin-left: 3%; margin-top: 3%"; id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="images/logo.png" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>Luis Navarro Del Angel</b></h4>
+    <!-- <img src="images/logo.png" style="width:45%;" class="w3-round"><br><br> -->
   </div>
   <div class="w3-bar-block">
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>BIO</a>
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-th-large fa-fw w3-margin-right"></i>WORK</a>
-    <a href="#papers" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw w3-margin-right"></i>PAPERS</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home fa-fw w3-margin-right"></i></a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i></a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-th-large fa-fw w3-margin-right"></i></a>
+    <a href="#papers" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw w3-margin-right"></i></a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i></a>
   </div>
   <div class="w3-panel w3-large">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -39,19 +39,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
 
+  <!--foto de bienvenida -->
+<header id="home">
+  <div id = "headerimg2">
+    <img src = "images/logoGif.gif" style="margin-left: 5%; margin-top: 0%" width="70%" height="20%" >
+  </header>
+
   <!-- Header -->
-  <header id="work">
+
     <a href="#"><img src="images/logo.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
+
     <h1><b></b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
-      <button class="w3-button w3-black">Español</button>
-      <br>
-    </div>
+      <!-- <button class="w3-button w3-black">Español</button>
+      <button class="w3-button w3-black">English</button> -->
+      <h4><b style= "margin-left: 70%"> Luis Navarro Del Angel</b></h4>
+
+      <br>  <br> <br>
+
     </div>
   </header>
-
+  <br> <br> <h4 id="work"><b>Projects</b></h4> <br>
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom" style="text-align: justify;">
@@ -148,8 +158,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-container w3-white">
       </div>
     </div>
-  </div>  <div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align: justify;">
-    <h4 id="about"> <b>Bio</b></h4>
+  </div>
+  <div class="w3-section w3-bottombar w3-padding-16"> </div>
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align: justify;">
+
+<h4 id="about"> <b>Bio</b></h4>
     <p >Currently a PhD student in Communication, New Media, and Cultural studies at McMaster University.
 His current research intersects with live coding, Artificial Intelligence, and software studies. He also
 holds an MA in Communication and New Media from McMaster University and a Licenciatura in Music
@@ -168,6 +182,7 @@ Conference on Live Coding, ICLC 2016 (Canada 2016), ICLC 2017 (Mexico 2017), and
     </p>
     <hr>
   <!-- Contact Section -->
+  <div class="w3-section w3-bottombar w3-padding-16"> </div>
   <div class="w3-container w3-padding-large w3-grey">
     <h4 id="contact"><b>Contact info</b></h4>
     <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
