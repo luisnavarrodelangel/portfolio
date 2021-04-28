@@ -7,13 +7,22 @@
 
 
 html {
-    background: linear-gradient(86deg, #40d7c5, #7079c5);
-    background-size: 400% 400%;
-    -webkit-animation: AnimationName 15s ease infinite;
-    -moz-animation: AnimationName 15s ease infinite;
-    animation: AnimationName 15s ease infinite;
+/*     background: linear-gradient(86deg, #40d7c5, #7079c5); */
+    background-image: url("static/images/rosas.jpg");
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+
+
+/*     background-size: 400% 400%; */
+/*     -webkit-animation: AnimationName 100s ease infinite; */
+/*     -moz-animation: AnimationName 100s ease infinite; */
+/*     animation: AnimationName 100s ease infinite; */
 }
 
+.commentbox {
+	width: 100%;
+}
 
 body {
   display: flex;
@@ -56,6 +65,7 @@ contenedorDelEditor {
   top: 10px;
   box-shadow: 0 0 8px 1px rgb(0 0 0 / 100%);
   background-color: black;
+  opacity: 0.7;
   flex-grow: 1;
   flex-direction: column;
   margin:2%;
@@ -86,13 +96,14 @@ contenedorDelEditor {
 	margin: 2%;
 	width: 25%;
 	background-color: white;
-
+    opacity: 0.8;
 	float:right;
 
 }
 
 .textoIntro {
  color: black;
+
  padding: 1em;
 
 
