@@ -21,10 +21,12 @@ html {
 }
 
 .commentbox {
-	background-color: black;
+	background-color: #bb7470;
 	opacity: 0.75;
 	width: 100%;
-	color: white;
+	color: black;
+	font-weight: bold;
+	padding-left: 2.5em;
 }
 
 body {
@@ -181,12 +183,16 @@ ul {
 	}
 
 .menuButtons {
-margin-right: 70%;
+margin-right: 80vw;
+display: inline;
+flex-wrap: nowrap;
+/* max-width: 800px; */
+
 
 }
 
 .menuButtons li {
-	display: inline;
+	width: 35%;
 	background-color: #71273e;
 	color: white;
 	padding-left: 5%;
@@ -194,6 +200,13 @@ margin-right: 70%;
 	margin-left: 1%;
 	border-radius: 10px;
 	}
+
+.menuButtons li:hover {
+	background-color: transparent;
+	color: #71273e;
+		border-radius: 10px;
+		border : 1px solid #71273e;
+}
 
 .ejemCodeLargo {
 	width: inherit;
@@ -319,5 +332,17 @@ h3 {
 .playEinstrucciones {
   color: white;
   display: flex;
-  width:1000px;
+  width:60vw;
+}
+
+.commentbox a {
+color: #2d4926
+}
+
+.titulo a {
+	text-decoration: none;
+	color: white;
+	font-size: 40%;
+	float: right;
+	padding-right: 3em
 }

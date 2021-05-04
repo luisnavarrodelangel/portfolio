@@ -87,3 +87,7 @@ margin: 5%;
 .hwt-content mark.yellow {
 	background-color: #ffec99;
 }
+
+.hwt-content mark.vino {
+	background-color: #b30000;
+}
