@@ -27,6 +27,7 @@ html {
 	color: black;
 	font-weight: bold;
 	padding-left: 2.5em;
+
 }
 
 body {
@@ -34,6 +35,7 @@ body {
   flex-direction: column;
   background-color: transparent;
   font-family: 'Dosis', sans-serif;
+
 
 }
 
@@ -55,7 +57,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  height: 500px;
+/*   height: 500px; */
 
 }
 
@@ -74,6 +76,7 @@ contenedorDelEditor {
   flex-grow: 1;
   flex-direction: column;
   margin:2%;
+  height: 40vw;
 }
 
 .editorArea {
@@ -345,4 +348,10 @@ color: #2d4926
 	font-size: 40%;
 	float: right;
 	padding-right: 3em
+}
+
+.discord {
+  display: flex;
+  flex-direction:column;
+
 }

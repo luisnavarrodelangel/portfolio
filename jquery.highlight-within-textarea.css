@@ -84,10 +84,15 @@ margin: 5%;
 	background-color: rgb(34, 74, 10);
 }
 
-.hwt-content mark.yellow {
-	background-color: #ffec99;
+.hwt-content mark.gray {
+	background-color: gray;
 }
+
+.hwt-content mark.black {
+		background-color: black;
+	}
 
 .hwt-content mark.vino {
 	background-color: #b30000;
+
 }
