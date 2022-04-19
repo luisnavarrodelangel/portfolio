@@ -1,7 +1,7 @@
 {
 "acordeon": ["acordeon/acordeon0.wav"],
 "altavoz": ["altavoz/grupo.wav","altavoz/sensacional.wav"],
-"bajo": ["bajo/bajo0.wav","bajo/bajo1.wav"],
+"bajo": ["bajo/0_bajo.wav","bajo/1_bajo-aspero.wav","bajo/2_fingerBass1.wav","bajo/3_acousticBass1.wav","bajo/4_fretlessBass1.wav","bajo/5_pickedBass1.wav","bajo/6_slapBass1.wav"],
 "contratiempos": ["contratiempos/0ContratiempoCerrado.wav","contratiempos/1ContratiempoAbierto.wav","contratiempos/2ContratiempoCerrado.wav"],
 "cuerdas": ["cuerdas/0cuerda.wav","cuerdas/1cuerda.wav"],
 "efecto": ["efecto/0efecto.wav"],
