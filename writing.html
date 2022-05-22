@@ -1,166 +1,145 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Luis Navarro's Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;
-background-color: white;
-/* background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
-}
-</style>
-</head>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<link rel="stylesheet" type="text/css" media="all" href="techWriter/docs/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+<base target="_blank">
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <!-- <img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br> -->
-    <h4><b style="color:black;">Luis Navarro</b></h4>
-    <!-- <p class="w3-text-grey">Template by W3.CSS</p> -->
-  </div>
-  <div class="w3-bar-block">
-    <!-- <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> -->
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>Bilingual professional with ample experience in technical writing with projects including conference and journal papers, user manuals, online documentation, and tutorials. Strong interest in themes of computer technology and society. Passionate about learning and researching new technical topics.</a>
-    <a onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>navarrol@mcmaster.ca</a>
-    <a onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-phone fa-fw w3-margin-right"></i>(905) 379 8165</a>
-  </div>
-  <!-- <div class="w3-panel w3-large">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div> -->
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-    <h1 style="color:black;"><b>Writing Portfolio</b></h1>
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <!-- <span class="w3-margin-right">Filter:</span>
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button> -->
-    </div>
-    </div>
-  </header>
-
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <!-- <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
-      <div class="w3-container w3-white">
-        <a href="https://dj.dancecult.net/index.php/dancecult/article/view/1066/962" target="_blank"><b>Saboritmico: A report from the dance floor in mexico-Journal article (English) </b></a>
-        <p>This text describes the journey of the Mexican collective RGGTRN, a nomadic group interested in music such as reggaeton, cumbia sonidera, and tribal. This was paper published at <i> Dancecult: Journal of Electronic Dance Music Culture </i> (2019). </p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
-      <div class="w3-container w3-white">
-        <a href="https://zenodo.org/record/4091446#.YnmXKhzMLeQ" target="_blank"><b>Bellacode: localized textual interfaces for live coding music - Conference paper (English) </b></a>
-        <p>This paper focuses on the development of localized live coding esolangs, targeting the underlying affordances of TidalCycles via the Estuary web-based environment. This was paper presented at the <i> International Conference on Live Coding </i> (Spain, 2019). </p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
-      <div class="w3-container w3-white">
-      <a href="https://iclc.toplap.org/2017/cameraReady/Navarro_Cacharpo%20co-performing%20cumbia%20sonidera%20with%20deep%20abstraction_ICLC2017.pdf" target="_blank"><b>Cacharpo: Coperforming Cumbia Sonidera with Deep Abstractions - Conference paper (English) </b></a>
-        <p>This paper describes Cacharpo, an autonomous agent that serves as an assistant within live coding
-performance. This paper was presented at the <i> International Conference on Live Coding </i> (Mexico, 2017). </p></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <!-- <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
-      <div class="w3-container w3-white">
-        <a href="https://toplap.org/" target="_blank"><b>Editor of the Digital Arts Blog Toplap.org (English/Spanish)</b></a>
-        <p>The Toplap blog is the blog of the TOPLAP organisation founded in 2004 which explores and promotes live coding arts.
-          As editor of this blog, I lay out and proofread upcoming articles and create activities to engage readers. </p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <!-- <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
-      <div class="w3-container w3-white">
-        <a href="techWriter/docs/Manual operaciones - Corte Laser 500.pdf" target="_blank"><b>User Manual Translation for Laser Cutting Machine (Spanish)</b></a>
-        <p>Translation, from English to Spanish, of the manual for the laser cutting machine model TQL-MFC500-GC60. Project done for Bimex (Mexico, 2016).</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <!-- <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
-      <div class="w3-container w3-white">
-        <a href="https://sites.google.com/site/tallerdeaudio/herramientas/fluxus" target="_blank"><b>Online Tutorial for <i>Fluxus</i> Audiovisual Programming Language (Spanish)</b></a>
-        <p><i>Fluxus</i> is a programming environment for real-time animation and audio. This tutorial was made for the course <i> Introduction to real-time animation environments </i> taught at the Multimedia Center of the National Center for the Arts (Mexico, 2011).</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <!-- <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div> -->
-
-  <!-- Images of Me -->
-  <!-- <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-      <img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%">
-    </div>
-    <div class="w3-col m6">
-      <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
-    </div>
-  </div> -->
-
-  <!-- <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <p>Trilingual professional with ample experience in technical writing through projects including conference and journal papers, user manuals, online documentation, and tutorials. Strong interest in themes of computer technology and society. Passionate about learning and researching new technical topics.</p>
-    </div>
-  </div> -->
-
-  <!-- <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> -->
-
-<!-- End page content -->
+<h1 id="luis-navarro---writing-portfolio">Luis Navarro - Writing Portfolio</h1>
+<div class="mainContainer">
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 36%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><a href="https://dj.dancecult.net/index.php/dancecult/article/view/1066/962">Saboritmico: A report from the dance floor in mexico-Journal article (English)</a></th>
+<th><a href="https://zenodo.org/record/4091446#.YnmXKhzMLeQ">Bellacode: localized textual interfaces for live coding music - Conference paper (English)</a></th>
+<th><a href="https://iclc.toplap.org/2017/cameraReady/Navarro_Cacharpo%20co-performing%20cumbia%20sonidera%20with%20deep%20abstraction_ICLC2017.pdf">Cacharpo: Coperforming Cumbia Sonidera with Deep Abstractions - Conference paper (English)</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>This text describes the journey of the Mexican collective RGGTRN, a nomadic group interested in music such as reggaeton, cumbia sonidera, and tribal. This was paper published at Dancecult: Journal of Electronic Dance Music Culture (2019).</td>
+<td>This paper focuses on the development of localized live coding esolangs, targeting the underlying affordances of TidalCycles via the Estuary web-based environment. This was paper presented at the International Conference on Live Coding (Spain, 2019).</td>
+<td>This paper describes Cacharpo, an autonomous agent that serves as an assistant within live coding performance. This paper was presented at the International Conference on Live Coding (Mexico, 2017).</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 23%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><a href="https://toplap.org/">Editor of the Digital Arts Blog Toplap.org (English/Spanish)</a></th>
+<th><a href="https://www.luisnavarrodelangel.net/techWriter/docs/Manual%20operaciones%20-%20Corte%20Laser%20500.pdf">User Manual Translation for Laser Cutting Machine (Spanish)</a></th>
+<th><a href="https://sites.google.com/site/tallerdeaudio/herramientas/fluxus">Online Tutorial for Fluxus Audiovisual Programming Language (Spanish)</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The Toplap blog is the blog of the TOPLAP organisation founded in 2004 which explores and promotes live coding arts. As editor of this blog, I lay out and proofread upcoming articles and create activities to engage readers.</td>
+<td>Translation, from English to Spanish, of the manual for the laser cutting machine model TQL-MFC500-GC60. Project done for Bimex (Mexico, 2016).</td>
+<td>Fluxus is a programming environment for real-time animation and audio. This tutorial was made for the course Introduction to real-time animation environments taught at the Multimedia Center of the National Center for the Arts (Mexico, 2011).</td>
+</tr>
+</tbody>
+</table>
 </div>
+<!--
+## Table of Contents
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
+- [Saboritmico: A report from the dance floor in mexico-Journal article (English)](#Writing-Samples)
+- [Requirements](#requirements)
+- [How To Install The Module](#how-to-install-the-module)
+- [How To Uninstall The Module](#how-to-uninstall-the-module)
+- [OAuth Access Token Requirement](#oauth-access-token-requirement)
+- [Usage Examples](#usage-examples)
+
+## Functions
+
+So far there are two functions included in this module.
+
+- [`Get-EwsFolder`](docs/Get-EwsFolder.md)
+  * List ALL folders from a mailbox
+  * Search a folder from mailbox by folder display name (eg. `Inbox`, `Drafts`)
+  * Get a folder from mailbox by folder ID (eg. `AQMkADRmZTI3MW..`)
+- [`Move-EwsItem`](docs/Move-EwsItem.md)
+  * Move all mailbox items from one folder to another
+  * Move mailbox items between dates from one folder to another
+
+> *Note: These functions use OAuth token to authenticate with Exchange Online. Basic authentication using username and password is not supported*
+
+## Requirements
+
+- A registered Azure AD app
+  * **API Name:** *Exchange*
+  * **API Permission Type:** *Application*
+  * **API Permission Name:** *full_access_as_app*
+
+      ![Azure Ad Api Permission](https://raw.githubusercontent.com/junecastillote/EWS.PS/master/docs/images/AzureAdApp-API-Permissions.png)<br>A registered Azure AD App with full_access_as_app API permisson
+
+- Windows PowerShell 5.1
+- [Exchange Web Services Managed API 2.2](https://www.microsoft.com/en-us/download/details.aspx?id=42951)
+- For getting access tokens, you can have either [MSAL.PS](https://www.powershellgallery.com/packages/MSAL.PS) or [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS)
+
+## How To Install The Module
+
+- [Download the module](https://github.com/junecastillote/EWS.PS/archive/master.zip) and extract the ZIP file on your computer.
+
+  ![Extract the module](https://raw.githubusercontent.com/junecastillote/EWS.PS/master/docs/images/extract_module.png)<br>Extract the module files on your computer
+
+- Open PowerShell as Administrator, change the working directory to the location of the module.
+- Run the script `.\install.ps1 -ModulePath 'C:\Program Files\WindowsPowerShell\Modules' -Verbose`
+
+  ![Install the module](https://raw.githubusercontent.com/junecastillote/EWS.PS/master/docs/images/install_module.png)<br>Install the module
+
+## How To Uninstall The Module
+
+- Open PowerShell as Administrator, change the working directory to the location of the module.
+- Run the script `.\uninstall.ps1 -Verbose`
+![Uninstall the module](https://raw.githubusercontent.com/junecastillote/EWS.PS/master/docs/images/uninstall_module.png)<br>Uninstall the module
+
+## OAuth Access Token Requirement
+
+Make sure to acquire an access token first. Use the `Get-MsalToken` cmdlet or `Get-AdalToken`.
+
+### Get Access Token Using MSAL.PS
+
+```PowerShell
+# Get MSAL Token using CLIENT ID,  CLIENT SECRET, and TENANT ID
+$msalParams = @{
+    ClientId = 'CLIENT ID'
+    ClientSecret = (ConvertTo-SecureString 'CLIENT SECRET' -AsPlainText -Force)
+    TenantId = 'TENANT ID'
+    Scopes   = "https://outlook.office.com/.default"
 }
+$token = Get-MsalToken @msalParams
+```
 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+### Get Access Token Using ADAL.PS
+
+```PowerShell
+# Get MSAL Token using CLIENT ID,  CLIENT SECRET, and TENANT ID
+$msalParams = @{
+    ClientId = 'CLIENT ID'
+    ClientSecret = (ConvertTo-SecureString 'CLIENT SECRET' -AsPlainText -Force)
+    TenantId = 'TENANT ID'
+    Resource   = "https://outlook.office.com/"
 }
-</script>
+$token = Get-MsalToken @msalParams
+```
 
-</body>
-</html>
+> *Visit the [MSAL.PS GitHub](https://github.com/AzureAD/MSAL.PS) page to learn more about using MSAL.PS module to acquire OAuth access tokens.*
+
+## Usage Examples
+
+- [List All Folders In A Mailbox](docs/Get-EwsFolder.md#example-1--list-all-folders-in-a-mailbox)
+- [Find A Folder Using Folder Name](docs/Get-EwsFolder.md#example-2--find-a-folder-using-folder-name)
+- [Find A Folder Using Folder ID](docs/Get-EwsFolder.md#example-3--find-a-folder-using-folder-id)
+- [Move All Items from One Folder to Another](docs/Move-EwsItem.md#example-1--move-all-items-from-one-folder-to-another)
+- [Move Items Received Between Specified Dates](docs/Move-EwsItem.md#example-2--move-items-received-within-specified-dates) -->
