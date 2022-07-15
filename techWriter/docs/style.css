@@ -16,13 +16,13 @@ body {
 
 h1 {
   border-radius: 5px;
-  background-color: rgb(255, 0, 0);
-  color:  white;
+/*   background-color: rgb(255, 0, 0);
+  color:  white; */
   /* border: 1px solid brown; */
 }
 
 h2 {
-  background: rgb(255, 0, 0, 0.6);
+  background: rgb(255,99,71);
   color: white;
   width: max-content;
   border-radius: 5px;
@@ -31,7 +31,7 @@ h2 {
 }
 
 h3:hover {
-  background-color: rgb(255, 0, 0, 0.6);
+  background-color: rgb(255,99,71);
   border-radius: 5px;
   width: max-content;
 }
@@ -47,14 +47,19 @@ a:hover{
 }
 
 .profile {
+  color:white;
   width:55%;
   margin-right: 0.5%;
   text-align: center;
+  background-color: rgb(255,99,71)
+
+
 }
 
 .projects {
   border-left: 1px solid;
   padding-left: 0.5%;
+
 }
 
 .contact {
@@ -66,5 +71,8 @@ a:hover{
 
 .profileStatement {
   text-align: justify;
+  padding: 3%;
+    font-weight: bold;
+
 
 }
