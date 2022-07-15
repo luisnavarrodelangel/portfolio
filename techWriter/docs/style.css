@@ -1,4 +1,6 @@
 body {
+  background:blue;
+  display: inline-flex;
   font-family: 'Dosis', sans-serif;
   background: white;
   background-image: radial-gradient(lightgray 1px, transparent 0);
@@ -7,7 +9,8 @@ body {
   padding-left: 1%;
   padding-right: 1%;
   margin: auto;
-  width: 80%;
+/*   height: 80em; */
+/*   width: 80%; */
 
 }
 
@@ -41,5 +44,27 @@ a:hover{
   color: white;
   border-radius: 5px;
   width: max-content;
+}
+
+.profile {
+  width:55%;
+  margin-right: 0.5%;
+  text-align: center;
+}
+
+.projects {
+  border-left: 1px solid;
+  padding-left: 0.5%;
+}
+
+.contact {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 3.5%;
+
+}
+
+.profileStatement {
+  text-align: justify;
 
 }
