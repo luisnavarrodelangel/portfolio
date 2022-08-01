@@ -59,7 +59,7 @@ a:hover{
 .projects {
   border-left: 1px solid;
   padding-left: 0.5%;
-
+  text-align:justify;
 }
 
 .contact {

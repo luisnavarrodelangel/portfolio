@@ -21,7 +21,7 @@ Planned and recorded a video tutorial to teach how to install the audio software
 ### [How-to guide- “Deploying the Estuary software on a cloud virtual computer” (English)](https://github.com/dktr0/estuary/wiki/Deploying-Estuary-on-a-cloud-virtual-machine)              
 Researched, planned and wrote a wiki guide describing the basic steps to deploy the McMaster University Estuary software on a Ubuntu cloud virtual computer hosted at DigitalOcean (2020).
 
-### [Explanatory slides- “Introduction to web development with HTML and CSS” (English)](https://www.luisnavarrodelangel.net/teaching/docs/design-code/Tutorial-11.pdf)
+### [Tutorial - “Introduction to web development with HTML and CSS” (English)](https://www.luisnavarrodelangel.net/techWriter/docs/webpage-tutorial.pdf)
 Created slides to teach undergraduates about web development with HTML and CSS at McMaster University (2019).
 
 ### [Help file- “Customize Estuary's CSS themes” (English)](https://github.com/dktr0/estuary/blob/dev/THEMES.md#estuarys-themes)
