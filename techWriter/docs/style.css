@@ -3,7 +3,7 @@ body {
   display: inline-flex;
   font-family: 'Dosis', sans-serif;
   background: white;
-  background-image: radial-gradient(lightgray 1px, transparent 0);
+  /* background-image: radial-gradient(lightgray 1px, transparent 0); */
   background-size: 10px 10px;
   background-position: -19px -19px;
   padding-left: 1%;
